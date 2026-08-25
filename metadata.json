@@ -1,0 +1,6 @@
+{
+  "name": "YaroMedia",
+  "description": "Ultra-clean, minimalist digital agency landing page with vibrant neon glow, high-contrast imagery, and premium service showcases.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
