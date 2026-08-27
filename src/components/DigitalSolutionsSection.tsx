@@ -37,7 +37,7 @@ export const DigitalSolutionsSection: React.FC<DigitalSolutionsSectionProps> = (
       id: 'web-designing-ui-ux',
       image: 'https://raw.githubusercontent.com/mivsr-spec/assets/main/Call%20Now%20on%E2%80%9D%20(1).png',
       title: 'Web Designing (UI/UX)',
-      badge: '(Complete Business Package)',
+      badge: '(Complete Brand Package)',
       description: 'Wireframing, Design Systems, Mobile-First Layouts, Prototyping.',
     },
   ];
@@ -69,7 +69,7 @@ export const DigitalSolutionsSection: React.FC<DigitalSolutionsSectionProps> = (
           <p className="text-xs sm:text-sm md:text-base text-white/75 font-normal leading-relaxed max-w-2xl mx-auto">
             Your all-in-one partner for everything from professional visuals to complete web presence.{' '}
             <span className="text-white/50 block sm:inline mt-1 sm:mt-0 font-light">
-              (Example info: Laxmi Nagar&apos;s Choice for Affordable, Premium Digital Agency Services.)
+              (Affordable, Premium Digital Agency Services in Banbasa, Uttarakhand.)
             </span>
           </p>
         </div>

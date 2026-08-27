@@ -27,9 +27,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuote }) => {
     service: '',
   });
 
-  const email = 'hello@yaromedia.com';
-  const phone = '+1 (555) 839-2044';
-  const location = 'Laxmi Nagar, New Delhi';
+  const email = 'vsrx74@gmail.com';
+  const phone = '+91 89 5812 3147';
+  const location = 'Banbasa, Uttarakhand IND - 262310';
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);
@@ -85,7 +85,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuote }) => {
 
               {/* Subtitle / Description */}
               <p className="text-xs sm:text-sm md:text-base text-white/70 font-light leading-relaxed max-w-md">
-                Ready to launch your next project? Fill out the form below or reach out directly to start a conversation about your business needs and how we can help you grow.
+                Ready to launch your next project? Fill out the form below or reach out directly to start a conversation about your brand's needs and how we can help you grow.
               </p>
 
               {/* Contact Info Pills with White Circular Icon Badges */}

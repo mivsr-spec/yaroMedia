@@ -46,7 +46,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuote }) => {
             src="https://raw.githubusercontent.com/mivsr-spec/assets/main/167774-Photoroom.png"
             alt="Creative Portrait"
             referrerPolicy="no-referrer"
-            className="w-full h-full object-contain object-bottom md:object-right-bottom scale-110 sm:scale-120 md:scale-125 lg:scale-130 xl:scale-135 origin-bottom-right drop-shadow-[0_25px_60px_rgba(0,0,0,0.65)] select-none opacity-95 [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]"
+            className="w-full h-full object-contain object-bottom md:object-right-bottom scale-110 sm:scale-120 md:scale-125 lg:scale-130 xl:scale-135 origin-bottom-right -translate-y-6 sm:-translate-y-10 md:-translate-y-14 lg:-translate-y-18 drop-shadow-[0_25px_60px_rgba(0,0,0,0.65)] select-none opacity-95 [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]"
           />
         </div>
 
@@ -62,15 +62,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuote }) => {
               </p>
               <h1
                 id="hero-main-title"
-                className="text-5xl sm:text-7xl md:text-8xl lg:text-[6.5rem] xl:text-[7.75rem] font-extrabold tracking-tight font-display text-white leading-[0.95] drop-shadow-md"
+                className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[6.25rem] font-extrabold tracking-tight font-display text-white leading-[0.95] drop-shadow-md"
               >
                 Creative <br />
-                Agency
+                Marketing Agency
               </h1>
             </div>
 
-            {/* Right Side: Philosophy Headline & Description (positioned below shoulder line) */}
-            <div className="lg:col-span-5 lg:pl-6 space-y-3 sm:space-y-4 pt-6 sm:pt-10 lg:pt-24 xl:pt-28">
+            {/* Right Side: Philosophy Headline & Description (positioned down around shoulder line) */}
+            <div className="lg:col-span-5 lg:pl-6 space-y-3 sm:space-y-4 pt-10 sm:pt-16 lg:pt-44 xl:pt-52">
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-white font-display leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
                 Great design should feel impossible to ignore.
               </h2>

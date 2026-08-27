@@ -5,6 +5,7 @@ import { ServicesSection } from './components/ServicesSection';
 import { DigitalSolutionsSection } from './components/DigitalSolutionsSection';
 import { Footer } from './components/Footer';
 import { QuoteModal } from './components/QuoteModal';
+import { WhatsAppButton } from './components/WhatsAppButton';
 
 export default function App() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
@@ -49,6 +50,9 @@ export default function App() {
         onClose={handleCloseQuote}
         initialServiceId={selectedServiceId}
       />
+
+      {/* Sticky Floating WhatsApp Action */}
+      <WhatsAppButton />
     </div>
   );
 }

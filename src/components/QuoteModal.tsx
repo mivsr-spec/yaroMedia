@@ -33,9 +33,9 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
 
-  const email = 'hello@yaromedia.com';
-  const phone = '+1 (555) 839-2044';
-  const location = 'Laxmi Nagar, New Delhi';
+  const email = 'vsrx74@gmail.com';
+  const phone = '+91 89 5812 3147';
+  const location = 'Banbasa, Uttarakhand IND - 262310';
 
   useEffect(() => {
     if (initialServiceId) {
@@ -144,7 +144,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
 
             {/* Paragraph */}
             <p className="text-xs sm:text-sm md:text-base text-white/70 font-light leading-relaxed max-w-md">
-              Ready to launch your next project? Fill out the quick details and our creative team will reach out directly to discuss your business goals and custom package.
+              Ready to launch your next project? Fill out the quick details and our creative team will reach out directly to discuss your brand goals and custom package.
             </p>
 
             {/* Quick Contact Badges */}
