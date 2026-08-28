@@ -6,6 +6,7 @@ import { DigitalSolutionsSection } from './components/DigitalSolutionsSection';
 import { Footer } from './components/Footer';
 import { QuoteModal } from './components/QuoteModal';
 import { WhatsAppButton } from './components/WhatsAppButton';
+import { Preloader } from './components/Preloader';
 
 export default function App() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
@@ -22,6 +23,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#050505] text-[#ededed] selection:bg-[#ff5216]/30 selection:text-white flex flex-col justify-between relative">
+      {/* Cinematic 4s Wave Fill Preloader Overlay */}
+      <Preloader duration={4000} />
+
       {/* Navigation */}
       <Navbar onOpenQuote={() => handleOpenQuote()} />
 
