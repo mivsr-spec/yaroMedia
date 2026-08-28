@@ -32,93 +32,50 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuote }) => {
           </div>
         </div>
 
-        {/* Large Person Image blending seamlessly on the right side - 80% Scale Prominence */}
+        {/* Large Person Image blending seamlessly: left side on mobile, right side on desktop as specified */}
         <div
           id="hero-person-visual"
-          className="pointer-events-none absolute right-[-8%] sm:right-[-4%] md:right-[-2%] lg:right-[1%] xl:right-[3%] bottom-0 top-0 sm:top-2 md:top-4 lg:top-0 w-[95%] sm:w-[85%] md:w-[78%] lg:w-[68%] xl:w-[62%] max-w-[960px] h-[95%] sm:h-[98%] md:h-full flex items-end justify-end overflow-visible z-[5]"
+          className="pointer-events-none absolute left-[-8%] sm:left-[-4%] md:left-auto md:right-[-2%] lg:right-[1%] xl:right-[3%] top-0 bottom-0 w-[100%] xs:w-[94%] sm:w-[86%] md:w-[62%] lg:w-[54%] xl:w-[48%] max-w-[1050px] h-full flex items-end justify-start md:justify-end overflow-visible z-[5]"
         >
           {/* Ambient Glow behind portrait */}
           <div
             aria-hidden="true"
-            className="absolute top-1/4 right-1/4 w-[400px] sm:w-[550px] lg:w-[650px] h-[400px] sm:h-[550px] lg:h-[650px] bg-[#ff5216]/30 rounded-full blur-[110px] -z-10"
+            className="absolute top-1/4 left-1/4 md:left-auto md:right-1/4 w-[340px] sm:w-[520px] lg:w-[580px] h-[340px] sm:h-[520px] lg:h-[580px] bg-[#ff5216]/35 rounded-full blur-[90px] sm:blur-[120px] -z-10"
           />
           <img
             src="https://raw.githubusercontent.com/mivsr-spec/assets/main/167774-Photoroom.png"
             alt="Creative Portrait"
             referrerPolicy="no-referrer"
-            className="w-full h-full object-contain object-bottom md:object-right-bottom scale-110 sm:scale-120 md:scale-125 lg:scale-130 xl:scale-135 origin-bottom-right -translate-y-6 sm:-translate-y-10 md:-translate-y-14 lg:-translate-y-18 drop-shadow-[0_25px_60px_rgba(0,0,0,0.65)] select-none opacity-95 [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]"
+            className="w-full h-full object-contain object-bottom-left md:object-bottom-right scale-[1.48] xs:scale-[1.52] sm:scale-[1.5] md:scale-[1.36] lg:scale-[1.4] xl:scale-[1.44] origin-bottom-left md:origin-bottom-right -translate-y-6 sm:-translate-y-10 md:-translate-y-3 lg:-translate-y-5 xl:-translate-y-7 drop-shadow-[0_25px_60px_rgba(0,0,0,0.8)] select-none opacity-95 [mask-image:linear-gradient(to_bottom,black_88%,transparent_100%)]"
           />
         </div>
 
-        {/* Inner Padding container - expanded length, generous bottom spacing, and vertical breathing room */}
-        <div className="relative z-10 w-full pt-28 sm:pt-36 md:pt-40 lg:pt-48 pb-16 sm:pb-24 lg:pb-28 px-6 sm:px-12 lg:px-16 xl:px-20 min-h-[640px] sm:min-h-[740px] md:min-h-[820px] lg:min-h-[880px] flex flex-col justify-between">
+        {/* Inner Padding container - optimized height, tight mobile rhythm, and balanced breathing room */}
+        <div className="relative z-10 w-full pt-14 sm:pt-24 md:pt-32 lg:pt-36 pb-8 sm:pb-14 lg:pb-16 px-5 sm:px-10 lg:px-14 xl:px-16 min-h-[460px] sm:min-h-[560px] md:min-h-[640px] lg:min-h-[720px] flex flex-col justify-between">
           
           {/* Main Hero Row: Left Big Headline vs Right Statement */}
-          <div className="relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center my-auto py-8 sm:py-12">
+          <div className="relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8 lg:gap-10 items-start lg:items-center my-auto py-2 sm:py-6 mt-[128px]">
             {/* Left Side: Hey, we're + Massive Bold Title */}
-            <div className="lg:col-span-7 space-y-3 sm:space-y-4">
-              <p className="text-sm sm:text-base md:text-lg font-medium text-white/90 tracking-wide">
+            <div className="lg:col-span-7 space-y-2 sm:space-y-3">
+              <p className="text-xs sm:text-sm md:text-base font-medium text-white/90 tracking-wide">
                 Hey, we&apos;re a
               </p>
               <h1
                 id="hero-main-title"
-                className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[6.25rem] font-extrabold tracking-tight font-display text-white leading-[0.95] drop-shadow-md"
+                className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] xl:text-[5.5rem] font-extrabold tracking-tight font-display text-white leading-[1.02] sm:leading-[0.98] drop-shadow-md"
               >
                 Creative <br />
                 Marketing Agency
               </h1>
             </div>
 
-            {/* Right Side: Philosophy Headline & Description (positioned down around shoulder line) */}
-            <div className="lg:col-span-5 lg:pl-6 space-y-3 sm:space-y-4 pt-10 sm:pt-16 lg:pt-44 xl:pt-52">
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-white font-display leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
+            {/* Right Side: Philosophy Headline & Description */}
+            <div className="lg:col-span-5 lg:pl-4 space-y-2 sm:space-y-3 pt-3 sm:pt-6 lg:pt-28 xl:pt-36 max-w-sm sm:max-w-md">
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold tracking-tight text-white font-display leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
                 Great design should feel impossible to ignore.
               </h2>
-              <p className="text-xs sm:text-sm md:text-base text-white/85 font-light leading-relaxed max-w-lg drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
+              <p className="text-xs sm:text-sm text-white/85 font-light leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
                 From Google Business VIP rank to bespoke brand identity and retention reels — we build brands that connect and convert.
-              </p>
-            </div>
-          </div>
-
-          {/* Bottom Numbered Skill Pillars (Exact match to reference #01, #02, #03, #04) */}
-          <div className="relative z-10 w-full mt-20 sm:mt-32 pt-10 sm:pt-12 border-t border-white/15 grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
-            {/* #01 */}
-            <div className="space-y-1">
-              <span className="text-xs sm:text-sm font-bold text-[#ffae85] tracking-wider">
-                #01
-              </span>
-              <p className="text-xs sm:text-sm md:text-base font-medium text-white tracking-wide">
-                Brand Strategy
-              </p>
-            </div>
-
-            {/* #02 */}
-            <div className="space-y-1">
-              <span className="text-xs sm:text-sm font-bold text-[#ffae85] tracking-wider">
-                #02
-              </span>
-              <p className="text-xs sm:text-sm md:text-base font-medium text-white tracking-wide">
-                Brand Identity Design
-              </p>
-            </div>
-
-            {/* #03 */}
-            <div className="space-y-1">
-              <span className="text-xs sm:text-sm font-bold text-[#ffae85] tracking-wider">
-                #03
-              </span>
-              <p className="text-xs sm:text-sm md:text-base font-medium text-white tracking-wide">
-                Google VIP Setup
-              </p>
-            </div>
-
-            {/* #04 */}
-            <div className="space-y-1">
-              <span className="text-xs sm:text-sm font-bold text-[#ffae85] tracking-wider">
-                #04
-              </span>
-              <p className="text-xs sm:text-sm md:text-base font-medium text-white tracking-wide">
-                Reels &amp; Media Editing
               </p>
             </div>
           </div>
@@ -126,49 +83,49 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuote }) => {
       </div>
 
       {/* ========================================================================= */}
-      {/* 2. TRUSTED BY BRANDS RIBBON - Directly under the hero card as in reference */}
+      {/* 2. NUMBERED SERVICE PILLARS (#01 - #04) - Placed directly below the hero card */}
       {/* ========================================================================= */}
-      <div className="max-w-[1440px] mx-auto mt-8 sm:mt-12 px-4 sm:px-8">
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 py-4">
-          <div className="text-xs sm:text-sm font-medium text-white/50 tracking-wide max-w-xs">
-            Trusted by Brands We&apos;ve Helped Shape
-          </div>
-
-          <div className="flex flex-wrap items-center gap-6 sm:gap-10 md:gap-14 text-sm sm:text-base font-semibold text-white/80">
-            {/* Supa Blox */}
-            <div className="flex items-center gap-2 hover:text-white transition-colors cursor-default">
-              <span className="w-4 h-4 rounded-full border border-white/60 flex items-center justify-center">
-                <span className="w-1.5 h-1.5 rounded-full bg-white" />
+      <div className="max-w-[1440px] mx-auto mt-6 sm:mt-10 px-4 sm:px-8">
+        <div className="bg-[#121212]/80 border border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-7 md:p-8 backdrop-blur-md">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
+            {/* 1 */}
+            <div className="space-y-1 sm:space-y-1.5 group">
+              <span className="text-xs sm:text-sm font-bold text-[#ff5216] tracking-wider font-sans">
+                1
               </span>
-              <span>Supa Blox</span>
+              <p className="text-sm sm:text-base md:text-lg font-semibold text-white tracking-tight group-hover:text-[#ffae85] transition-colors">
+                Brand Strategy
+              </p>
             </div>
 
-            {/* Hype Blox */}
-            <div className="flex items-center gap-2 hover:text-white transition-colors cursor-default">
-              <span className="text-base font-serif">⧖</span>
-              <span>Hype Blox</span>
-            </div>
-
-            {/* Frame Blox */}
-            <div className="flex items-center gap-2 hover:text-white transition-colors cursor-default">
-              <span className="w-4 h-4 rounded-full bg-white/20 border border-white/80 overflow-hidden flex">
-                <span className="w-2 h-full bg-white" />
+            {/* 2 */}
+            <div className="space-y-1 sm:space-y-1.5 group">
+              <span className="text-xs sm:text-sm font-bold text-[#ff5216] tracking-wider font-sans">
+                2
               </span>
-              <span>Frame Blox</span>
+              <p className="text-sm sm:text-base md:text-lg font-semibold text-white tracking-tight group-hover:text-[#ffae85] transition-colors">
+                Brand Identity Design
+              </p>
             </div>
 
-            {/* Ultra Blox */}
-            <div className="flex items-center gap-2 hover:text-white transition-colors cursor-default">
-              <span className="w-4 h-4 rounded-full border-2 border-white flex items-center justify-center text-[9px]">
-                ●
+            {/* 3 */}
+            <div className="space-y-1 sm:space-y-1.5 group">
+              <span className="text-xs sm:text-sm font-bold text-[#ff5216] tracking-wider font-sans">
+                3
               </span>
-              <span>Ultra Blox</span>
+              <p className="text-sm sm:text-base md:text-lg font-semibold text-white tracking-tight group-hover:text-[#ffae85] transition-colors">
+                Google VIP Setup
+              </p>
             </div>
 
-            {/* Apex Scale */}
-            <div className="flex items-center gap-2 hover:text-white transition-colors cursor-default">
-              <span className="w-2 h-2 rotate-45 bg-[#ff5216]" />
-              <span>Apex Studio</span>
+            {/* 4 */}
+            <div className="space-y-1 sm:space-y-1.5 group">
+              <span className="text-xs sm:text-sm font-bold text-[#ff5216] tracking-wider font-sans">
+                4
+              </span>
+              <p className="text-sm sm:text-base md:text-lg font-semibold text-white tracking-tight group-hover:text-[#ffae85] transition-colors">
+                Reels &amp; Media Editing
+              </p>
             </div>
           </div>
         </div>

@@ -9,36 +9,41 @@ export const WhatsAppButton: React.FC = () => {
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp with YaroMedia"
       title="Chat with us on WhatsApp"
-      className="fixed bottom-6 right-6 z-[9999] w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center transition-transform duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/40 rounded-full drop-shadow-[0_10px_25px_rgba(0,0,0,0.7)]"
+      className="!fixed bottom-5 right-5 sm:bottom-6 sm:right-6 !z-[99999] w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/40 rounded-full drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)] cursor-pointer select-none"
+      style={{ position: 'fixed', bottom: '24px', right: '24px', zIndex: 99999 }}
     >
       <svg
         viewBox="0 0 100 100"
-        className="w-full h-full select-none"
+        className="w-full h-full select-none transform-gpu drop-shadow-[0_4px_10px_rgba(0,0,0,0.4)]"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        shapeRendering="geometricPrecision"
       >
-        {/* Black Background Filled Speech Bubble */}
+        {/* Solid Black Base Circle & Bubble Shape */}
+        <circle cx="50" cy="50" r="46" fill="#000000" />
         <path
-          d="M50 94C42.1 94 34.6 91.8 28.1 87.9L8 94L14.3 74.4C10.1 67.4 7.7 59.2 7.7 50.4C7.7 27 26.6 8 50 8C73.4 8 92.3 27 92.3 50.4C92.3 73.8 73.4 94 50 94Z"
+          d="M24 76 L13 87 L24.5 83.5 Z"
           fill="#000000"
         />
 
-        {/* Outer White Contour Stroke */}
+        {/* Outer White Contour Speech Ring with Smooth Tail */}
         <path
-          d="M50 90C42.7 90 35.7 88 29.6 84.4L28.3 83.6L14.6 87.8L18.8 74.4L18 73C14.1 66.5 12 58.9 12 50.4C12 29.4 29 12.4 50 12.4C71 12.4 88 29.4 88 50.4C88 71.4 71 90 50 90Z"
+          d="M50 8C26.8 8 8 26.8 8 50C8 57.9 10.2 65.4 14.1 71.8L8.5 88.5C8.1 89.6 9.1 90.7 10.2 90.3L27.4 85.2C34.1 89.4 41.8 92 50 92C73.2 92 92 73.2 92 50C92 26.8 73.2 8 50 8Z"
           stroke="#FFFFFF"
-          strokeWidth="7.5"
+          strokeWidth="7"
           strokeLinecap="round"
           strokeLinejoin="round"
+          fill="#000000"
         />
 
-        {/* White Phone Handset Icon */}
+        {/* Crisp, Smooth White Phone Receiver */}
         <path
-          d="M68.5 61.2C67.5 60.7 62.4 58.2 61.5 57.8C60.5 57.5 59.8 57.3 59.1 58.4C58.4 59.4 56.4 61.8 55.8 62.5C55.2 63.2 54.6 63.3 53.5 62.8C52.5 62.3 49.1 61.2 45.1 57.6C42 54.8 39.8 51.3 39.2 50.3C38.6 49.2 39.1 48.7 39.7 48.1C40.1 47.7 40.7 46.9 41.2 46.3C41.7 45.7 41.9 45.3 42.3 44.6C42.6 43.9 42.5 43.3 42.2 42.8C41.9 42.3 39.8 37.1 39 35C38.1 33 37.3 33.2 36.6 33.2C36 33.2 35.3 33.2 34.6 33.2C33.9 33.2 32.8 33.5 31.8 34.5C30.8 35.6 28.1 38.1 28.1 43.3C28.1 48.5 31.9 53.5 32.4 54.2C33 54.9 39.8 65.6 50.4 70.2C52.9 71.3 54.9 71.9 56.4 72.4C58.9 73.2 61.2 73.1 63 72.8C65 72.5 69.2 70.3 70.1 67.8C71 65.4 71 63.3 70.7 62.8C70.5 62.4 69.6 61.7 68.5 61.2Z"
+          d="M68.8 61.6C67.7 61.1 62.5 58.5 61.6 58.1C60.6 57.7 59.9 57.5 59.2 58.6C58.5 59.7 56.4 62.2 55.8 62.9C55.2 63.6 54.5 63.7 53.4 63.2C52.3 62.6 48.7 61.4 44.5 57.6C41.2 54.7 39 51.1 38.3 50C37.7 48.9 38.2 48.3 38.8 47.7C39.3 47.3 39.9 46.4 40.5 45.8C41 45.2 41.2 44.7 41.6 44C42 43.3 41.8 42.6 41.5 42C41.2 41.5 39 36 38.1 33.8C37.2 31.7 36.3 32 35.6 32C35 32 34.2 32 33.5 32C32.7 32 31.5 32.3 30.5 33.4C29.4 34.6 26.5 37.3 26.5 42.8C26.5 48.3 30.5 53.6 31.1 54.3C31.7 55 38.9 66.2 50.1 70.8C52.8 71.9 54.9 72.6 56.5 73.1C59.2 74 61.6 73.8 63.5 73.5C65.6 73.2 70 70.8 70.9 68.3C71.9 65.7 71.9 63.6 71.6 63.1C71.3 62.6 70.4 62.1 68.8 61.6Z"
           fill="#FFFFFF"
         />
       </svg>
     </a>
   );
 };
+
 
