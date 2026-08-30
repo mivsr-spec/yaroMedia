@@ -319,11 +319,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuote }) => {
             <div className="flex items-center gap-2.5 pt-1">
               <a
                 id="footer-social-instagram"
-                href="https://instagram.com"
+                href="https://www.instagram.com/yaromediaa?igsi=MXh4YTQ0Z3hzbTIzdg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-white/[0.05] hover:bg-[#ff5216] border border-white/[0.1] hover:border-transparent text-white flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="Instagram"
+                aria-label="Instagram (@yaromediaa)"
+                title="Follow YaroMedia on Instagram"
               >
                 <Instagram className="w-3.5 h-3.5" />
               </a>
